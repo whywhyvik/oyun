@@ -1,0 +1,60 @@
+@media(max-width:900px){.hero,.lobby-grid,.room-layout{grid-template-columns:1fr}.hero{gap:24px;min-height:auto}.hero-copy{text-align:center}.hero-copy .lead{margin-inline:auto}.hero-stats{justify-content:center}.room-layout{gap:15px}.letter-grid{grid-template-columns:repeat(6,1fr)}}
+@media(max-width:620px){:root{--header:66px}.shell{width:min(calc(100% - 24px),var(--content))}.page{padding:22px 0 46px}.brand-copy small,.connection span{display:none}.connection{padding:9px}.profile-pill .profile-pill-copy{display:none}h1{font-size:44px}.profile-card,.card-pad,.game-card,.review-card{padding:19px}.avatar-picker{grid-template-columns:repeat(4,1fr)}.room-row{grid-template-columns:auto 1fr}.room-row .btn{grid-column:1/-1}.players-grid{grid-template-columns:1fr}.room-summary,.game-header{align-items:flex-start;flex-direction:column}.answer-grid,.vote-grid,.results-actions{grid-template-columns:1fr}.letter-grid{grid-template-columns:repeat(5,1fr);gap:7px}.letter-btn{border-radius:12px}.podium{gap:6px}.podium-card{padding:13px 5px}.podium-card.first{padding-top:18px;transform:translateY(-10px)}.podium-card .avatar{width:58px}.ranking-row{grid-template-columns:34px 40px 1fr auto;gap:8px}.ranking-row .avatar{width:38px}.mini-feature-grid{grid-template-columns:1fr}.modal-actions{grid-template-columns:1fr}}
+@media(max-width:760px){.brand-image{height:50px}.brand-image img{max-height:50px}.discord-mini{width:38px;height:38px}.discord-mini img{width:44px;height:44px}.connection{min-width:0}.hero-game-logo{width:min(360px,88%);margin:0 auto 4px}.avatar-carousel{grid-template-columns:42px minmax(0,1fr) 42px;gap:8px}.carousel-arrow{width:42px;height:50px}.avatar-stage .avatar{width:min(100%,250px)}}
+@media(max-width:480px){.top-actions{gap:6px}.discord-mini{display:none}.connection{padding:9px 10px}.connection span{display:inline;font-size:11px}.avatar-carousel{grid-template-columns:36px minmax(0,1fr) 36px}.carousel-arrow{width:36px;height:46px;border-radius:13px}.avatar-stage{padding:9px;border-radius:22px}.avatar-stage .avatar{border-radius:19px}.field-label-row{align-items:flex-start;flex-direction:column;gap:5px}.hero-game-logo{width:min(320px,94%)}}
+@media(max-width:620px){.quick-actions{grid-template-columns:1fr}}
+@media(max-width:900px){.review-answer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.review-board-head{display:block}.score-legend{justify-content:flex-start;margin-top:12px}.random-letter-banner{grid-template-columns:120px 1fr}.random-letter-banner .big-letter{font-size:82px}.category-answer-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:600px){.random-letter-banner{grid-template-columns:88px 1fr;gap:13px;padding:14px}.random-letter-banner .big-letter{font-size:68px}.random-letter-copy h2{font-size:19px}.random-letter-copy p{font-size:11px}.letter-chip{width:30px;height:30px}.category-answer-grid{grid-template-columns:1fr}.review-board-card{padding:14px}.review-answer-grid{grid-template-columns:1fr 1fr}.review-answer-cell{min-height:116px;padding:11px}.review-submit-bar{align-items:stretch;flex-direction:column}.review-submit-bar .btn{width:100%}}
+@media(max-width:600px){.letter-turn-banner{align-items:flex-start;flex-direction:column;padding:16px}.letter-turn-banner h1{font-size:24px}.chooser-badge{width:100%;text-align:center}.answer-submit-row{align-items:stretch;flex-direction:column}.answer-submit-row .btn{width:100%}.letter-history.letter-picker .letter-chip{width:34px;height:34px}}
+
+/* v2.7 — telefon + PC stabil oyun görünümü */
+html{-webkit-text-size-adjust:100%}
+button,input,select{touch-action:manipulation}
+@media(max-width:900px){
+  .room-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .room-controls>.card{min-width:0}
+  .game-shell,.review-wrap,.results-wrap{width:100%;max-width:100%}
+}
+@media(max-width:700px){
+  .shell{width:min(calc(100% - 20px),var(--content))}
+  .page{padding-top:14px;padding-bottom:calc(34px + env(safe-area-inset-bottom))}
+  .room-controls{grid-template-columns:1fr}
+  .game-card{padding:16px}
+  .game-header{gap:12px;margin-bottom:12px}
+  .round-progress{width:100%;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}
+  .round-progress::-webkit-scrollbar{display:none}
+  .round-progress span{flex:0 0 22px}
+  .category-answer-grid .input,.input,.select{font-size:16px;min-height:48px}
+  .category-answer-grid .answer-box{padding:12px}
+  .answer-submit-row{position:sticky;z-index:24;bottom:max(8px,env(safe-area-inset-bottom));background:rgba(10,12,25,.97);backdrop-filter:blur(16px);box-shadow:0 16px 42px rgba(0,0,0,.34)}
+  .answer-submit-row .btn{min-height:52px}
+  .review-submit-bar{bottom:max(8px,env(safe-area-inset-bottom));z-index:24}
+  .letter-history{gap:6px}
+  .letter-chip{width:31px;height:31px}
+}
+@media(max-width:520px){
+  h1{font-size:clamp(34px,11vw,44px)}
+  .topbar-inner{gap:8px}
+  .profile-pill{padding:5px}
+  .room-summary h1{font-size:29px}
+  .code-card{width:100%;justify-content:space-between}
+  .players-grid{gap:10px}
+  .player-card{min-width:0}
+  .review-answer-grid{grid-template-columns:1fr}
+  .review-answer-cell{min-height:105px}
+  .random-letter-banner{grid-template-columns:72px minmax(0,1fr)}
+  .random-letter-banner .big-letter{font-size:58px}
+  .random-letter-copy h2{font-size:18px}
+  .letter-history.letter-picker{justify-content:center}
+  .letter-chip.pickable{width:38px;height:38px}
+  .winner-stage h1{font-size:34px}
+  .podium{align-items:end}
+  .podium-card .avatar{width:52px}
+  .ranking-row{padding:10px}
+}
+@media(min-width:1200px){
+  .room-layout{grid-template-columns:minmax(0,1fr) 360px}
+  .game-shell{max-width:1180px;margin-inline:auto}
+  .category-answer-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .review-wrap{max-width:1220px;margin-inline:auto}
+}

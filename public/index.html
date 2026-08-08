@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#090b16">
+  <title>İsim Şehir Hayvan Bitki — Profil</title>
+  <meta name="description" content="İsim, Şehir, Hayvan, Bitki ve daha fazlasıyla çok oyunculu kelime oyunu.">
+  <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/tokens.css">
+  <link rel="stylesheet" href="/assets/css/base.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/pages.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+</head>
+<body>
+  <div class="noise"></div>
+  <div id="siteHeader"></div>
+  <main class="shell page">
+    <section class="hero">
+      <div class="hero-copy">
+        <img class="hero-game-logo" src="/assets/img/game-logo.png" alt="İsim Şehir">
+        <span class="eyebrow"><span class="eyebrow-dot"></span>CANLI ÇOK OYUNCULU</span>
+        <h1><span class="gradient-text">Harfini sırayla seç.</span><br>Hepsini doldur.</h1>
+        <p class="lead">İsim, Şehir, Hayvan, Bitki, Eşya, Ülke, Meslek, Yemek, Marka ve Ünlü kategorilerini doldur. Her tur farklı bir oyuncu harf seçer; kullanılan harfler tekrar seçilemez. Tüm turlar bitince final sıralaması ortaya çıkar.</p>
+        <div class="hero-stats">
+          <div class="hero-stat"><b>2–10</b> oyuncu</div>
+          <div class="hero-stat"><b>1–20</b> tur</div>
+          <div class="hero-stat"><b>10</b> kategori</div>
+          <div class="hero-stat"><b>60 sn</b> ilk Bitti sonrası</div>
+          <div class="hero-stat"><b>Toplu</b> değerlendirme</div>
+        </div>
+      </div>
+      <section class="card profile-card">
+        <span class="eyebrow">OYUNCU PROFİLİ</span>
+        <h2>Karakterini oluştur</h2>
+        <p class="muted">Kayıt gerekmiyor. Önce cinsiyetini seç, sonra karakterler arasında kaydır.</p>
+        <form id="profileForm" class="profile-form">
+          <div class="field">
+            <label for="nameInput">Oyuncu adı</label>
+            <div class="input-row"><input id="nameInput" class="input" maxlength="22" autocomplete="nickname" placeholder="Örn. Mavi"><button id="randomName" type="button" class="btn btn-ghost">Rastgele</button></div>
+          </div>
+          <div class="field">
+            <div class="field-label-row"><label>1. Cinsiyetini seç</label><span id="genderHint" class="tiny">Önce Kız veya Erkek seç.</span></div>
+            <div class="segment gender-segment"><button type="button" data-gender="female"><span class="gender-symbol">♀</span>Kız</button><button type="button" data-gender="male"><span class="gender-symbol">♂</span>Erkek</button></div>
+          </div>
+          <div class="field">
+            <label>2. Karakterini seç</label>
+            <div id="avatarPicker" class="avatar-picker"></div>
+          </div>
+          <div id="profilePreview" class="profile-preview hidden"></div>
+          <button class="btn btn-primary btn-lg btn-wide" type="submit">Lobiye Devam Et →</button>
+        </form>
+      </section>
+    </section>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script type="module" src="/assets/js/pages/index.js"></script>
+</body>
+</html>

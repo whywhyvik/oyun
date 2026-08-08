@@ -1,0 +1,17 @@
+{
+  "name": "isim-sehir-online",
+  "version": "2.7.0",
+  "private": true,
+  "description": "Modüler, gerçek zamanlı çok oyunculu İsim Şehir Hayvan Bitki web oyunu",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "check": "node scripts/check.js",
+    "test": "node scripts/smoke.js && node scripts/realtime.js",
+    "test:realtime": "node scripts/realtime.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
